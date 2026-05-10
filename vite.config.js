@@ -24,5 +24,19 @@ export default defineConfig(({mode}) => {
         }
       }
     },
+    build: {
+      chunkSizeWarningLimit: 1000,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor': ['react', 'react-dom', 'react-router-dom'],
+            'recharts': ['recharts'],
+            'lucide': ['lucide-react'],
+            'gemini': ['@google/genai'],
+            'motion': ['motion'],
+          }
+        }
+      }
+    },
   };
 });
