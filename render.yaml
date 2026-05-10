@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: libriswap
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+        placeholder: "your_mongodb_atlas_connection_string"
+      - key: JWT_SECRET
+        sync: false
+        placeholder: "your_secure_jwt_secret_key"
+      - key: SMTP_HOST
+        value: "smtp.gmail.com"
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PORT
+        value: "5000"

@@ -1,0 +1,6 @@
+{
+  "name": "LibriSwap",
+  "description": "A premium second-hand book marketplace featuring location-based discovery, real-time chat between collectors, AI-driven recommendations, and a loyalty rewards program.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}
